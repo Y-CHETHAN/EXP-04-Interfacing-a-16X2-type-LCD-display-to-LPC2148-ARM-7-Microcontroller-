@@ -194,6 +194,8 @@ int main(void)
 
 <img width="1515" alt="Experiment 4" src="https://user-images.githubusercontent.com/75234991/196031344-4b8d34b8-78a5-44b7-b551-60dd943d9cd8.png">
 
+<br><br><br><br><br><br><br><br>
+
 ###  Circuit Diagram:
 
 <img width="1515" alt="Experiment 4(1)" src="https://user-images.githubusercontent.com/75234991/196031355-3b021b1a-2fff-4c9d-8a8c-0effe65a81de.png">
