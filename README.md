@@ -6,13 +6,15 @@ To Interface 16X2 type LCD display to LPC2148 ARM 7 and write a code for display
 ## Components required:
 Proteus ISIS professional suite, Kiel μ vision 5 Development environment
 
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
 ## Theory:
  
 ## LCD16X2
 
 ![image](https://user-images.githubusercontent.com/36288975/195774401-e3bffb44-0d3d-4b7e-b374-7a7a7ef60d48.png)
 
- ![image](https://user-images.githubusercontent.com/36288975/195773232-ab5dd9b0-99b7-4663-9bdf-6665fa93a052.png)
+![image](https://user-images.githubusercontent.com/36288975/195773232-ab5dd9b0-99b7-4663-9bdf-6665fa93a052.png)
 Fig.01 16X2 LCD DISPLAY 
 
 Apart from the voltage supply connections the important pins from the programming perspective are the data lines(8-bit Data bus), Register select, Read/Write and Enable pin.
