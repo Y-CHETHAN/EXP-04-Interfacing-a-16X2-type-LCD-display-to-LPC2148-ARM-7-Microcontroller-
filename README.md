@@ -104,28 +104,90 @@ Step 10: Select the hex file from the Kiel program folder and import the program
 
 Figure -12 Hex file for simulation
 
-## Kiel - Program  
+## Kiel - Program:
+```c
+#include <lpc214x.h>
+#include <stdint.h>
+#include <stdlib.h>
+#include <stdio.h>
 
+void delay_ms(uint16_t j)
+{
+    uint16_t x,i;
+	for(i=0;i<j;i++)
+	{
+    for(x=0; x<6000; x++);
+	}
+}
 
+void LCD_CMD(char command)
+{
+	IO0PIN = ( (IO0PIN & 0xFFFF00FF) | (command<<8) );
+	IO0SET = 0x00000040;
+	IO0CLR = 0x00000030;
+	delay_ms(2);
+	IO0CLR = 0x00000040;
+	delay_ms(5);
+}
 
+void LCD_INIT(void)
+{
+	IO0DIR = 0x0000FFF0;
+	delay_ms(20);
+	LCD_CMD(0x38);
+	LCD_CMD(0x0C);
+	LCD_CMD(0x06);
+	LCD_CMD(0x01);
+	LCD_CMD(0x80);
+}
 
+void LCD_STRING (char* msg)
+{
+	uint8_t i=0;
+	while(msg[i]!=0)
+	{
+		IO0PIN = ( (IO0PIN & 0xFFFF00FF) | (msg[i]<<8) );
+		IO0SET = 0x00000050;
+		IO0CLR = 0x00000020;
+		delay_ms(2);
+		IO0CLR = 0x00000040;
+		delay_ms(5);
+		i++;
+	}
+}
 
-## Proteus simulation 
+void LCD_CHAR (char msg)
+{
+		IO0PIN = ( (IO0PIN & 0xFFFF00FF) | (msg<<8) );
+		IO0SET = 0x00000050;
+		IO0CLR = 0x00000020;
+		delay_ms(2);
+		IO0CLR = 0x00000040;
+		delay_ms(5);
+}
 
+int main(void)
+{
+	uint8_t j;
+	char val_j[3];
+	j = 0;
+	
+	LCD_INIT();
+	LCD_STRING("19EE309");
+	LCD_CMD(0xC0);
+	LCD_STRING("ARM");
 
+	return 0;
+}
+```
 
+## Output: 
 
-##  layout Diagram 
+<img width="1515" alt="Experiment 4" src="https://user-images.githubusercontent.com/75234991/196031344-4b8d34b8-78a5-44b7-b551-60dd943d9cd8.png">
 
+###  Circuit Diagram:
 
+<img width="1515" alt="Experiment 4(1)" src="https://user-images.githubusercontent.com/75234991/196031355-3b021b1a-2fff-4c9d-8a8c-0effe65a81de.png">
 
 ## Result :
-
-Interfaced an LCD with ARM microcontroller is executed and displayed the strings  
-
- 
-
-
-
-
-
+Thus, Interfacing an LCD with ARM microcontroller is executed successfully and displayed the strings.
