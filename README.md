@@ -30,7 +30,7 @@ Read/Write(RW): This signal is used to write the data/cmd to LCD and reads the b
 
 Enable(EN): This pin is used to send the enable trigger to LCD. After sending the data/cmd, Selecting the data/cmd register, Selecting the Write operation. A HIGH-to-LOW pulse has to be send on this enable pin which will latch the info into the LCD register and triggers the LCD to act accordingly.
 
-<br><br><br><br>
+<br><br>
 
 ## Procedure:
 For creation of project on Kiel μ vision 5 Development environment (LPC21 XX/48/38)
