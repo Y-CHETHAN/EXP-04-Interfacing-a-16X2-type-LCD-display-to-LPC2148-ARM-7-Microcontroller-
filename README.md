@@ -6,7 +6,7 @@ To Interface 16X2 type LCD display to LPC2148 ARM 7 and write a code for display
 ## Components required:
 Proteus ISIS professional suite, Kiel μ vision 5 Development environment
 
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 ## Theory:
  
