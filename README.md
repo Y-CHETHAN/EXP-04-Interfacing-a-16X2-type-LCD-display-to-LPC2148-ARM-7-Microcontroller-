@@ -6,8 +6,6 @@ To Interface 16X2 type LCD display to LPC2148 ARM 7 and write a code for display
 ## Components required:
 Proteus ISIS professional suite, Kiel μ vision 5 Development environment
 
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-
 ## Theory:
  
 ## LCD 16X2
@@ -30,18 +28,16 @@ Read/Write(RW): This signal is used to write the data/cmd to LCD and reads the b
 
 Enable(EN): This pin is used to send the enable trigger to LCD. After sending the data/cmd, Selecting the data/cmd register, Selecting the Write operation. A HIGH-to-LOW pulse has to be send on this enable pin which will latch the info into the LCD register and triggers the LCD to act accordingly.
 
-<br><br>
-
 ## Procedure:
 For creation of project on Kiel μ vision 5 Development environment (LPC21 XX/48/38)
-1.	Click on the menu Project — New µVision Project creates a new project. Select an empty folder and enter the project name, for example Project1. It is good practice to use a separate folder for each project.
-2.	Next, the dialog Select Device for Target opens.
+1. Click on the menu Project — New µVision Project creates a new project. Select an empty folder and enter the project name, for example Project1. It is good practice to use a separate folder for each project.
+2. Next, the dialog Select Device for Target opens.
 ![image](https://user-images.githubusercontent.com/36288975/193398020-d0963a16-4349-4979-87d7-4c9dc11e2346.png)
 Figure -01 Target selection
 Select the device database. Default is Software Packs. You can have various local device databases, which show up in the drop-down box. For legacy devices (Arm7, Arm9), use the Legacy Device Database [no RTE]
-3.	Select the device for your application. This selection defines essential tool settings such as compiler controls, the memory layout for the linker, and the Flash programming algorithms.
-4.	Click OK.
-5.	Click on the new file option and save the file using save option with .C extension 
+3. Select the device for your application. This selection defines essential tool settings such as compiler controls, the memory layout for the linker, and the Flash programming algorithms.
+4. Click OK.
+5. Click on the new file option and save the file using save option with .C extension 
 
 For creating the simulation environment in Proteus suite Starting New Design
 
@@ -108,8 +104,6 @@ Step 10: Select the hex file from the Kiel program folder and import the program
 ![image](https://user-images.githubusercontent.com/36288975/193398071-76df0a57-7e76-4868-9769-c63d220482b8.png)
 
 Figure -12 Hex file for simulation
-
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 ## Kiel - Program:
 ```c
@@ -187,14 +181,9 @@ int main(void)
 	return 0;
 }
 ```
-
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-
 ## Output: 
 
 <img width="1515" alt="Experiment 4" src="https://user-images.githubusercontent.com/75234991/196031344-4b8d34b8-78a5-44b7-b551-60dd943d9cd8.png">
-
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 ###  Circuit Diagram:
 
